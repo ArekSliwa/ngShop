@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <input type="text" class="form-control" placeholder="szukaj..." ng-model="search">
+            <br>
+            <a href="#/admin/product/create" class="btn btn-success">dodaj</a>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div>
+
+        <div class="alert alert-info" ng-repeat="product in products | filter : search">
+
+            <h2>{{$index}}</h2>
+            <span class="text-capitalize">{{product.name}}</span><br>
+            {{product.weight}}<br>
+            {{product.desc}}<br>
+            {{product.price | number: 2}} zł/kg<br>
+            <p>&nbsp;</p>
+            <a href="#/admin/product/edit/{{$index}}" class="btn btn-default">Edytuj</a>
+            <button ng-click="delete( product )" class="btn btn-danger pull-right">Usuń</button>
+        </div>
+
+    </div>
+</div>

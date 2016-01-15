@@ -1,0 +1,28 @@
+
+[
+  {
+    "name": "pomarańcze",
+    "weight": 1,
+    "desc": "Świeże, wyśmienite na soki",
+    "price": 5
+  },
+  {
+    "name": "jabłko",
+    "weight": 1,
+    "desc": "Polskie, prosto od rolnika",
+    "price": 2
+
+  },
+  {
+    "name": "kiwi",
+    "weight": 1,
+    "desc": "Słodkie jak miód",
+    "price": 6
+  },
+  {
+    "name": "banan",
+    "weight": 1,
+    "desc": "piękne żółciótkie",
+    "price": 12
+  }
+]

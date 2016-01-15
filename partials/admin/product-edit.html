@@ -1,0 +1,45 @@
+
+<form ng-submit="saveChanges(product)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div class="form-group">
+                    <label>nazwa produktu:</label>
+                    <input type="text" class="form-control" ng-model="product.name">
+                </div>
+
+                <div class="form-group">
+                    <label>waga:</label>
+                    <input type="text" class="form-control" ng-model="product.weight">
+                </div>
+
+                <div class="form-group">
+                    <label>opis:</label>
+                    <textarea type="text" class="form-control" ng-model="product.desc"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>cena:</label>
+                    <input type="text" class="form-control" ng-model="product.price">
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                <h2>{{product.name}}</h2>
+
+                waga: {{product.weight}}<br>
+                {{product.desc}}<br>
+                <h3><span class="label label-warning">{{product.price | number:2}} zł<br></span></h3>
+
+
+            </div>
+            <hr>
+            <p>&nbsp;</p>
+
+            <button type="submit" class="btn btn-primary">zapisz zmiany</button>
+            <a href="#/admin/products" class="btn btn-default">wróć</a>
+        </div>
+    </div>
+</form>

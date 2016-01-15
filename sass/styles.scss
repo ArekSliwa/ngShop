@@ -1,0 +1,21 @@
+@import "compass";
+@import "susy";
+    
+$susy: (    
+    columns : 8,
+    container: 100%,
+    global-box-sizing: border-box,
+    debug: (image: show)
+);
+
+
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/normalize";
+@import "partials/podstawowe";
+@import "partials/header";
+@import "partials/content";
+
+@import "partials/footer";
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width,initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ngShop</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="">
+    <!--base href="http://localhost/ngShop/" -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script -->
+
+    <style>
+
+
+        .center {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .center thead th {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body ng-app="ngShop">
+
+    <!-------------------------------------------->
+    <!------------------ HEADER ------------------>
+    <!-------------------------------------------->
+
+    <div ng-controller="navigation" ng-include="navigation()"></div><!-- ng-controller="navigation" -->
+
+
+    <div ng-view></div>
+
+
+
+    <!-- ************************------ JavaScript --------*************************** -->
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
+    <script src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script src="js/ngShop.js"></script>
+    <script src="js/nav.ctrls.js"></script>
+    <script src="js/services.js"></script>
+
+    <script src="js/admin/admin.ctrls.js"></script>
+    <script src="js/site/site.ctrls.js"></script>
+
+
+</body>
+
+</html>

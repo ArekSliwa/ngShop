@@ -1,0 +1,47 @@
+/****************************************************************************/
+/************** HEADER ******************************************************/
+/****************************************************************************/
+
+header {
+    
+    //width: 100%;
+    //min-height: 100px;
+    //background-color: darkred;
+    position: relative;
+    top: 0;
+    padding: 2em;
+
+    h1 {
+        margin: 0;
+        //position: relative;
+        text-align: center;
+        //margin-top: 1em;
+        //line-height: 0;
+        color: #fff;
+    }
+}
+
+nav {
+    
+    
+    ul {
+        
+        padding: 0;
+        margin: 0;
+        @extend .clearfix;
+        
+    }
+    li {
+        
+    }
+    a {
+        color: black;
+        &:hover, &:focus {
+            color: black;
+        }
+        &:visited,
+        &:active {
+            color: black;
+        }
+    }
+}

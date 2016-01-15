@@ -1,0 +1,91 @@
+//wysrodkowanie wertykalne - parent musi miec chyba absolute.. dowiedziec sie
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+    
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align() {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin center() {
+        position: absolute;
+        top: 50%;                  
+        left: 50%; 
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+}
+
+
+@mixin rotate($ile) {
+    -ms-transform: rotate($ile + deg); /* IE 9 */
+        -webkit-transform: rotate($ile + deg); /* Safari */
+        transform: rotate($ile + deg);
+}
+
+@mixin blur($ile) {
+    -webkit-filter: blur($ile + px);
+  -moz-filter: blur($ile + px);
+  -o-filter: blur($ile + px);
+  -ms-filter: blur($ile + px);
+  filter: blur($ile + px);
+}
+
+
+/*Media Queries Mixiny*/
+
+
+/*
+@mixin tel {
+    @media screen and (max-width: 24em) {
+        @content;
+    }
+} 
+*/
+
+@mixin malutki {
+    @media screen and (max-width: 24em) {
+        @content;
+    }
+} 
+
+//do 768px
+@mixin maly {
+    @media screen and (min-width: 24em) and (max-width: 48em) {
+        @content;
+    }
+} 
+
+//do 1120px
+@mixin sredni {
+    @media screen and (min-width: 48em) and (max-width: 70em) {
+        @content;
+    }
+}
+
+//od 1120px
+@mixin duzy {
+    @media screen and (min-width: 70em) {
+        @content;
+    }
+}
+
+//height
+
+@mixin nizszy {
+    @media screen and (max-height: 50em) {
+        @content;
+    }
+} 

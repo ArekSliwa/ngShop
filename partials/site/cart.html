@@ -1,0 +1,62 @@
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h1>Koszyk</h1>
+
+
+                <div ng-if="!cart.length" class="alert alert-info"> Koszyk jest pusty.</div>
+
+                <div ng-if="cart.length">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>Waga</th>
+                            <th>Ilość</th>
+                            <th>Cena</th>
+                            <th>Razem</th>
+                            <th>Usuń</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in cart">
+                            <td>{{item.name}}</td>
+                            <td>{{item.weight}}</td>
+                            <td>{{item.qty}}</td>
+                            <td>{{item.price | number: 2}} zł</td>
+                            <td>{{item.qty * item.price | number: 2}} zł</td>
+                            <td><button class="btn btn-danger btn-small" ng-click="removeItem()"><span class="glyphicon glyphicon-trash"></span></button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><strong>Łącznie: {{ total()}} zł</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="upload" value="1">
+                        <input type="hidden" name="business" value="seller@dezignerfotos.com">
+                        <input type="hidden" name="item_name_1" value="Item Name 1">
+                        <input type="hidden" name="amount_1" value="1.00">
+                        <input type="hidden" name="shipping_1" value="1.75">
+                        <input type="hidden" name="item_name_2" value="Item Name 2">
+                        <input type="hidden" name="amount_2" value="2.00">
+                        <input type="hidden" name="shipping_2" value="2.50">
+
+
+                    <button ng-click="clearCart()" class="btn btn-danger">Wyczyść koszyk</button>
+                        <button class="btn btn-primary"  type="submit" value="PayPal">Zamów i opłać</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,26 @@
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2><span class="label label-warning pull-right">{{product.price | number:2}} zł</span></h2>
+                        <h2>{{product.name}}</h2>
+
+                        <h2><span class="label label-info pull-right">waga: {{product.weight}}</span></h2><br>
+                        {{product.desc}}<br>
+
+
+                        <p>&nbsp;</p>
+                        <a href="#/products" class="btn btn-default">wróć</a>
+                        <button ng-click="addToCart( product )" class="btn btn-primary">dodaj do koszyka</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
